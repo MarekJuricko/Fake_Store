@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fake Store
 
-## Getting Started
+A modern web application built with React and Next.js, designed for Browse products and viewing their detailed information. 
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**: Includes Login and Register pages for user authentication.
+- **Protected Routes**: Users must be logged in (via a fake JWT token) to access the product listing and individual product pages.
+- **Product Listing**: Browse a dynamic list of products with category filtering.
+- **Product Detail Page**: View comprehensive information about individual products.
+- **Quantity Selection**: Easily adjust the desired product quantity.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1.  **Clone the Repository**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/MarekJuricko/Fake_Store.git
+    cd your-project-name
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install Dependencies**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Start the Development Server**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Components
+
+-   **AuthGuard**: Manages authentication status and protects routes, ensuring only logged-in users can access certain parts of the application.
+-   **Navbar**: Provides site logout functionality.
+-   **ProductsList**: Renders the dynamic list of products and handles category filtering.
+
+
+## Styling
+
+- Uses **Tailwind CSS** for a utility-first approach to styling and theme management.
+- Implements **responsive design** for optimal viewing on various devices.
+
+
+## API
+
+Interacts with a mock API at: [Fake Store API](https://fakestoreapi.com/products).
